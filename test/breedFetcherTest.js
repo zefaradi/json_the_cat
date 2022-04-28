@@ -18,7 +18,7 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
-  it('test the scenario where an invalid/non-existent breed is passed in', (done) => {
+  it('returns undefined when an invalid/non-existent breed is passed in, via callback', (done) => {
     fetchBreedDescription('kutta', (err, desc) => {
        // we expect no description for this scenario
        assert.equal(desc, null);
